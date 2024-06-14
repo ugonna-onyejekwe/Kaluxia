@@ -41,7 +41,6 @@ export const Posts_page = () => {
         <div className="post_main_container container">
           <div className="wrapper ">
             {postList?.map((item, key) => {
-              console.log(item.desc);
               return (
                 <div className="box" key={key}>
                   <div className="img_con">

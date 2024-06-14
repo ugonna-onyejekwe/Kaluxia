@@ -29,7 +29,7 @@ function App() {
             },
           }
         );
-        console.log(response.data);
+        console.log(response?.data);
       } catch (error: any) {
         if (error?.response.data.message === "User session expired") {
           setCurrentUser(null);

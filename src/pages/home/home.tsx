@@ -93,7 +93,6 @@ export const Home_page = () => {
           slidesPerView={"auto"}
           autoplay={{ delay: 3000 }}
           speed={2000}
-          loop={true}
         >
           {users?.map((item, key) => {
             return (
