@@ -1,0 +1,160 @@
+@import "../../variables.scss";
+.single_post {
+  margin-top: 120px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 800px;
+  min-height: 100vh;
+  height: 100%;
+
+  .action_sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn_section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        font-size: 20px;
+        cursor: pointer;
+        color: $text_color;
+
+        a {
+          color: $text_color;
+        }
+      }
+    }
+  }
+
+  .avatar_section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    .avatar_img {
+      height: 50px;
+      width: 50px;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px solid rgb(193, 192, 192);
+    }
+
+    h4 {
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:hover {
+        color: $primary_color;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .avatar_img {
+        height: 40px;
+        width: 40px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .post_section {
+    margin-top: 40px;
+
+    .img_con {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    .txt {
+      padding: 15px 0;
+    }
+  }
+}
+
+.delete_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3000;
+  background: white;
+  box-shadow: 0 0 5px black;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  transform: translate(-50%, -310%);
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  transition: 0.4s ease;
+
+  &.active {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  p {
+    color: $text_color;
+  }
+
+  .btn_section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+      text-transform: capitalize;
+      font-size: 13px;
+      padding: 10px 15px;
+      border-radius: 15px;
+      border: 1px solid grey;
+      cursor: pointer;
+      transition: 0.4s ease;
+
+      &:hover {
+        background: whitesmoke;
+      }
+    }
+  }
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.4;
+  z-index: 2000;
+  pointer-events: none;
+
+  &.active {
+    opacity: 0.5;
+    pointer-events: all;
+  }
+}

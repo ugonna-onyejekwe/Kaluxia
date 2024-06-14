@@ -1,0 +1,135 @@
+@import "../../variables.scss";
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: $bg_color;
+  box-shadow: 0 0 5px grey;
+  z-index: 1000;
+
+  @media (max-width: 768px) {
+    padding: 10px 0;
+  }
+
+  .nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .menu_btn {
+      display: none;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        display: flex;
+
+        &.open {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: 700;
+      background: $gradient;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .navigators {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      .user_icon {
+        font-size: 20px;
+        color: $text_color;
+        line-height: 0;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        a {
+          text-transform: capitalize;
+          font-size: 15px;
+          font-weight: 500;
+          text-decoration: none;
+          color: $text_color;
+          cursor: pointer;
+          transition: 0.4s ease;
+
+          &:hover,
+          &.active {
+            color: $primary_color;
+          }
+
+          &.btn {
+            background: $primary_color;
+            color: white;
+            font-size: 14px;
+
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+        }
+
+        @media (max-width: 768px) {
+          position: fixed;
+          flex-direction: column;
+          height: 100vh;
+          right: -110%;
+          max-width: 300px;
+          width: 100%;
+          background: $bg_color;
+          top: 0;
+          align-items: unset;
+          padding: 30px;
+          box-shadow: 0 0 5px grey;
+          transition: 0.4s ease;
+          z-index: 2000;
+
+          &.active {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: 0.4s ease;
+
+    &.active {
+      opacity: 0.4;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+}
