@@ -1,7 +1,6 @@
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { post_title_reducer } from "../../../global-components";
-import { getImage } from "../../../global-components/data-fetcher";
 
 export const Post_card1 = ({
   thumbnail,
@@ -13,7 +12,7 @@ export const Post_card1 = ({
   return (
     <div className="post_card1">
       <div className="img_con">
-        <img src={getImage(thumbnail)} alt="post image" />
+        <img src={thumbnail.url} alt="post image" />
       </div>
 
       <div className="txt_con">

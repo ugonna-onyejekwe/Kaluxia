@@ -1,7 +1,7 @@
 import "./index.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { fetchData, getImage } from "../../global-components/data-fetcher";
+import { fetchData } from "../../global-components/data-fetcher";
 import { Loader } from "../../global-components";
 
 export const Authurs_page = () => {
@@ -38,7 +38,7 @@ export const Authurs_page = () => {
               <Link to={`/author/${item._id}`}>
                 <div className="box" key={key}>
                   <div className="img_con">
-                    <img src={getImage(item.avatar)} alt="authurs image" />
+                    <img src={item.avatar.url} alt="authurs image" />
                   </div>
                   <div className="txt_con">
                     <h3>{item.name}</h3>

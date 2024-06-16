@@ -14,12 +14,16 @@ import { userContext } from "../../global-components/context/user-context";
 import { HashLoader } from "react-spinners";
 import { Post } from "./components/posts";
 
+type AvatarType = {
+  url?: string;
+};
+
 export const Single_author_page = () => {
   const [openEdit, setOpenEdit] = useState(false);
   const [userInfo, setUserInfo] = useState<UsersType>();
   const [isLoading, setIsLoading] = useState(false);
   const [uploadedAvatar, setUploadedAvatar] = useState<File | any>(undefined);
-  const [avatar, setAvatar] = useState<string | null>("");
+  const [avatar, setAvatar] = useState<AvatarType>();
 
   window.scrollTo(0, 0);
 
@@ -78,12 +82,7 @@ export const Single_author_page = () => {
                   </div>
                 )}
                 {!uploadedAvatar && (
-                  <img
-                    src={`${
-                      import.meta.env.VITE_IMAGE_BASE_URL
-                    }/uploads/${avatar}`}
-                    alt="authur image"
-                  />
+                  <img src={avatar?.url} alt="authur image" />
                 )}
                 <input
                   type="file"

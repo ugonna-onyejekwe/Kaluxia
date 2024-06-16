@@ -44,12 +44,7 @@ export const Posts_page = () => {
               return (
                 <div className="box" key={key}>
                   <div className="img_con">
-                    <img
-                      src={`${import.meta.env.VITE_IMAGE_BASE_URL}/uploads/${
-                        item.thumbnail
-                      }`}
-                      alt="blog image"
-                    />
+                    <img src={item.thumbnail.url} alt="blog image" />
                   </div>
                   <div className="txt_con">
                     <div className="tag_section">

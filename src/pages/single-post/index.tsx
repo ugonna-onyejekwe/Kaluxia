@@ -74,12 +74,7 @@ export const Single_post_page = () => {
 
           <div className="post_section">
             <div className="img_con">
-              <img
-                src={`${import.meta.env.VITE_IMAGE_BASE_URL}/uploads/${
-                  post.thumbnail
-                }`}
-                alt="blog image"
-              />
+              <img src={post.thumbnail.url} alt="blog image" />
             </div>
             <h2>{post.title}</h2>
             <div className="txt">

@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import { useEffect, useState } from "react";
-import { fetchData, getImage } from "../../../global-components/data-fetcher";
+import { fetchData } from "../../../global-components/data-fetcher";
 import { Time } from "../../../global-components/date-formater";
 import { Loader, post_title_reducer } from "../../../global-components";
 import { post_desc_reducer } from "../../../global-components/description_reducer";
@@ -46,7 +46,7 @@ export const Post = () => {
             return (
               <div className="box" key={key}>
                 <div className="img_con">
-                  <img src={getImage(item.thumbnail)} alt="blog image" />
+                  <img src={item.thumbnail.url} alt="blog image" />
                 </div>
                 <div className="txt_con">
                   <div className="tag_section">
@@ -63,7 +63,7 @@ export const Post = () => {
                     </div>
                   </div>
 
-                  <Link to={"/blog"}>
+                  <Link to={`/post/${item._id}`}>
                     <h3>{post_title_reducer(item.title)}</h3>
                   </Link>
 

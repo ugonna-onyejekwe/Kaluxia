@@ -31,7 +31,11 @@ function App() {
         );
         console.log(response?.data);
       } catch (error: any) {
-        if (error?.response.data.message === "User session expired") {
+        if (
+          error?.response.data.message ===
+            "Unauthorized. Invalid token. pls login" ||
+          error?.response.data.message === "Unauthorized. no token. pls login"
+        ) {
           setCurrentUser(null);
         }
       }

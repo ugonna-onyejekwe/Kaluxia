@@ -1,5 +1,7 @@
 interface blog_card1_types {
-  thumbnail: string;
+  thumbnail: {
+    url: string | any;
+  };
   title: string;
   desc: string;
   reduceTxt?: boolean;
@@ -14,7 +16,9 @@ type PostType = {
   views: number;
   likes: number;
   date: string;
-  thumbnail: string;
+  thumbnail: {
+    url: string;
+  };
   createdAt: string;
 
   authur: {
@@ -27,7 +31,9 @@ type UsersType = {
   _id: string;
   name: string;
   bio: string | null;
-  avatar: string | null;
+  avatar: {
+    url: string | any;
+  };
   about: string | null;
   posts: number;
 };

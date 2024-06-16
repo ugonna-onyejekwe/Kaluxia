@@ -13,7 +13,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { useEffect, useState } from "react";
-import { fetchData, getImage } from "../../global-components/data-fetcher";
+import { fetchData } from "../../global-components/data-fetcher";
 import { Loader } from "../../global-components";
 
 export const Home_page = () => {
@@ -98,7 +98,7 @@ export const Home_page = () => {
             return (
               <SwiperSlide key={key} className="book_con">
                 <div className="img_con">
-                  <img src={getImage(item.avatar)} alt="author image" />
+                  <img src={item.avatar.url} alt="author image" />
                 </div>
                 <div className="txt_con">
                   <h3>

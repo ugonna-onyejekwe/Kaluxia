@@ -23,12 +23,7 @@ export const Poster_con = ({ authur, createdAt }: PosterType) => {
       {user && (
         <div className="avatar_section">
           <div className="avatar_img">
-            <img
-              src={`${import.meta.env.VITE_IMAGE_BASE_URL}/uploads/${
-                user.avatar
-              }`}
-              alt="Writer's image"
-            />
+            <img src={user.avatar.url} alt="Writer's image" />
           </div>
           <div className="txt">
             <h4>{user.name}</h4>
