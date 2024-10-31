@@ -21,9 +21,8 @@ export const Footer = () => {
             <h1>kaluxia</h1>
           </div>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
-            quam amet minus error rerum deleniti id accusamus et magnam,
-            voluptates ab.
+            Kaluxia is a blog that explores a wide range of topics, from tech
+            and lifestyle to personal experiences and social commentary.
           </p>
 
           <div className="socails">
@@ -48,11 +47,11 @@ export const Footer = () => {
         {/* div 2 */}
         <div>
           <h3>tags</h3>
-          <Link to="#">philosophy</Link>
-          <Link to="#">philosophy</Link>
-          <Link to="#">philosophy</Link>
-          <Link to="#">philosophy</Link>
-          <Link to="#">philosophy</Link>
+          <Link to="#">Business</Link>
+          <Link to="#">Inspiration</Link>
+          <Link to="#">News</Link>
+          <Link to="#">Sport</Link>
+          <Link to="#">Music</Link>
         </div>
 
         {/* div 3 */}

@@ -138,17 +138,17 @@ export const CreatePost = () => {
               />
             </div>
             <div className="input_con">
-              <label htmlFor="tag">What is you post based on</label>
+              <label htmlFor="tag">What is you post based on?</label>
               <select onChange={(e) => setTag(e.target.value)}>
                 <option value="Select category" selected disabled>
                   Select category
                 </option>
-                <option value="phiolo">pholir</option>
-                <option value="phiolo">pholir</option>
-                <option value="phiolo">pholir</option>
-                <option value="phiolo">pholir</option>
-                <option value="phiolo">pholir</option>
-                <option value="phiolo">pholir</option>
+                <option value="phiolo">Technology</option>
+                <option value="phiolo">Business</option>
+                <option value="phiolo">Inspiration</option>
+                <option value="phiolo">News</option>
+                <option value="phiolo">Sport</option>
+                <option value="phiolo">Music</option>
               </select>
             </div>
 
