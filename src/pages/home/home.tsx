@@ -75,7 +75,7 @@ export const Home_page = () => {
           })}
         </div>
         <div className="part2">
-          {posts.slice(0, 4).map((item, key) => {
+          {posts.slice(3, 7).map((item, key) => {
             return <Post_card2 {...item} key={key} />;
           })}
         </div>
@@ -118,12 +118,12 @@ export const Home_page = () => {
       {/* Section 4 */}
       <section className="section4 container">
         <div className="part1">
-          {posts?.slice(0, 4).map((item, key) => {
+          {posts?.slice(5, 9).map((item, key) => {
             return <Post_card2 {...item} key={key} reduceTxt={false} />;
           })}
         </div>
         <div className="part2">
-          {posts?.slice(0, 1).map((item, key) => {
+          {posts?.slice(10, 11).map((item, key) => {
             return <Post_card1 {...item} key={key} reduceTxt={false} />;
           })}
         </div>

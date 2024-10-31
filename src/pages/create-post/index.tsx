@@ -143,12 +143,12 @@ export const CreatePost = () => {
                 <option value="Select category" selected disabled>
                   Select category
                 </option>
-                <option value="phiolo">Technology</option>
-                <option value="phiolo">Business</option>
-                <option value="phiolo">Inspiration</option>
-                <option value="phiolo">News</option>
-                <option value="phiolo">Sport</option>
-                <option value="phiolo">Music</option>
+                <option value="Technology">Technology</option>
+                <option value="Business">Business</option>
+                <option value="Inspiration">Inspiration</option>
+                <option value="News">News</option>
+                <option value="Sport">Sport</option>
+                <option value="Music">Music</option>
               </select>
             </div>
 
